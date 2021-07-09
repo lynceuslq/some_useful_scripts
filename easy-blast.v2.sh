@@ -1,4 +1,6 @@
 #!/bin/bash
+export PATH="/PATH/TO/ncbi-blast-2.10.1+/bin:$PATH" #define your blast path here
+
 
 helpFunction()
 {
@@ -32,7 +34,6 @@ then
 else
    echo -e "start to $task query sequences $query against database $database at $(date)"
 
-   export PATH=/hwfssz5/ST_INFECTION/GlobalDatabase/user/liqian6/tools/ncbi-blast-2.10.1+/bin:$PATH
    export BLASTDB=$(echo $database | tr "/" "\n" | sed -e '$ d' | tr "\n" "/")
   
    echo $BLASTDB
