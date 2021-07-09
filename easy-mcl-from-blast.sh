@@ -1,11 +1,13 @@
 #!/bin/bash
 
-MCXLOAD="/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/envs.multi-user/vcontact2/bin/mcxload"
-MCL="/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/envs.multi-user/vcontact2/bin/mcl"
-MCXDUMP="/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/envs.multi-user/vcontact2/bin/mcxdump"
-INPUTabc="test2.blastn.abc"
+######################################################defining arguements here###################################################################
+MCXLOAD="/PATH/TO/mcxload"
+MCL="/PATH/TO/mcl"
+MCXDUMP="/PATH/TO/mcxdump"
 
-WORKDIR="/ldfssz1/ST_INFECTION/P20Z10200N0206_pathogendb/liqian6/GPD/MCL_test"
+#####################################################you do not need to change anything below###################################################
+INPUTabc="test2.blastn.abc"
+WORKDIR="/lPATH/TO/WORKING?DIRECTORY"
 
 echo -e "start to load abc file at $(date)"
 
