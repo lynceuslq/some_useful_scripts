@@ -6,7 +6,7 @@ some small scripts implemented with common bioinformatics tools
 
 
 2. easy-mcl-from-blast.h
-- how to apply Markov Clustering Algorithm on a gorup of sequences based on blast results
+- apply Markov Clustering Algorithm on a gorup of sequences based on blast results
 
 
 3. diamond_align.work.sh
