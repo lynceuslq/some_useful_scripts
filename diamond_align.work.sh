@@ -1,18 +1,21 @@
 #!/bin/bash
 
-INPATH="/ldfssz1/ST_INFECTION/P20Z10200N0206_pathogendb/liqian6/fece_meta/2017.NM.OB.test.data"
-OUTPATH="/jdfssz1/ST_HEALTH/P20Z10200N0206/liqian6/genesharing/vcset4_vcontact2/cl/selected_pc/functionalities/test_diamond"
-REFORMATTER="/hwfssz5/ST_INFECTION/GlobalDatabase/user/fengqikai/software/bbmap/reformat.sh"
-DIAMOND="/hwfssz5/ST_INFECTION/GlobalDatabase/user/fengqikai/software/Diamond/2.0.9/diamond"
-DIAMOND_DB="/jdfssz1/ST_HEALTH/P20Z10200N0206/liqian6/genesharing/vcset4_vcontact2/cl/selected_pc/functionalities/test_clustered.dmnd"
-BEDTOOLS="/zfssz2/ST_MCHRI/COHORT/fengqikai/software/bedtools2/bedtools2/bin/bedtools"
-PROTLIST="jdfssz1/ST_HEALTH/P20Z10200N0206/liqian6/genesharing/vcset4_vcontact2/cl/selected_pc/functionalities/protein_length.txt"
+INPATH="/PATH/TO/fq_files"
+OUTPATH="/PATH/TO/OUTPUT"
+REFORMATTER="/PATH/TO/bbmap/reformat.sh"
+DIAMOND="/PATH/TO/diamond"#I used Diamond 2.0.9
+DIAMOND_DB="/PATH/TO/DIAMOND_DATABASE"
+BEDTOOLS="/PATH/TO/bedtools"
+PROTLIST="/PATH/TO/protein_length.txt"#a file consisted of two columns: protein accessions and protein length, using tab as field separators
 
 ACCESSION="TESTACCFQ"
+
+
 
 echo -e "start to merge paired end reads of $ACCESSION at $(date)"
 
 $REFORMATTER in1=$INPATH/$ACCESSION.1.fq.gz in2=$INPATH/$ACCESSION.2.fq.gz out=$OUTPATH/$ACCESSION.merged.fq.gz
+#no need to merge if the input fastq file are single-end reads
 
 echo -e "fninishing merging paired end reads of $ACCESSION at $(date), results stored as $OUTPATH/$ACCESSION.merged.fq.gz"
 
