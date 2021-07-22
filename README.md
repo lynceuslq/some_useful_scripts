@@ -5,7 +5,7 @@ some small scripts implemented with common bioinformatics tools
 - blast with taxonomic information in the tabular output (outfmt 6)
 
 
-2. easy-mcl.h
+2. easy-mcl-from-blast.h
 - how to apply Markov Clustering Algorithm on a gorup of sequences based on blast results
 
 
